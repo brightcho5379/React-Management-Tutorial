@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import CustomerAdd from './Components/CustomerAdd'
 import Customer from './Components/customer';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
@@ -52,6 +53,7 @@ class App extends Component {
   render(){
     const {classes} = this.props;
     return(
+      <div>
       <Paper className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
@@ -78,9 +80,12 @@ class App extends Component {
         </Table>
        
       </Paper> 
+      <CustomerAdd/>
+      </div>
     );
 }
 }
+
 
 
 export default withStyles(styles)(App);
